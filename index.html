@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام الرسائل</title>
+    <style>
+        body { font-family: Tahoma; padding: 10px; }
+        input, button { padding: 8px; margin: 2px; }
+        table { width: 100%; border-collapse: collapse; }
+        td, th { border: 1px solid #ddd; padding: 8px; }
+        button:disabled { background: #ccc; }
+    </style>
+</head>
+<body>
+    <input type="text" id="group" placeholder="اسم المجموعة">
+    <button onclick="loadClients()">عرض العملاء</button>
+    
+    <table id="clients">
+        <thead>
+            <tr>
+                <th>الاسم</th>
+                <th>الجوال</th>
+                <th>الرصيد</th>
+                <th>إرسال</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>
