@@ -3,29 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نظام الرسائل</title>
+    <title>نظام العملاء</title>
     <style>
-        body { font-family: Tahoma; padding: 10px; }
-        input, button { padding: 8px; margin: 2px; }
-        table { width: 100%; border-collapse: collapse; }
-        td, th { border: 1px solid #ddd; padding: 8px; }
-        button:disabled { background: #ccc; }
+        * { box-sizing: border-box; font-family: 'Tahoma'; }
+        body { padding: 10px; background: #f0f2f5; }
+        .search-box { margin-bottom: 15px; }
+        input { width: 70%; padding: 8px; border: 1px solid #ddd; }
+        button { width: 28%; padding: 8px; background: #2185d0; border: none; color: white; }
+        table { width: 100%; border-collapse: collapse; background: white; }
+        th { background: #1b1c1d; color: white; padding: 10px; }
+        td { padding: 8px; border-bottom: 1px solid #ddd; }
+        .send-btn { background: #21ba45; padding: 5px 10px; }
     </style>
 </head>
 <body>
-    <input type="text" id="group" placeholder="اسم المجموعة">
-    <button onclick="loadClients()">عرض العملاء</button>
+    <div class="search-box">
+        <input type="text" id="groupInput" placeholder="ابحث باسم المجموعة...">
+        <button onclick="loadClients()">عرض العملاء</button>
+    </div>
     
-    <table id="clients">
+    <table id="clientsTable">
         <thead>
             <tr>
-                <th>الاسم</th>
-                <th>الجوال</th>
+                <th>الاسم الكامل</th>
+                <th>رقم الجوال</th>
                 <th>الرصيد</th>
-                <th>إرسال</th>
+                <th>الإجراء</th>
             </tr>
         </thead>
-        <tbody></tbody>
+        <tbody id="tableBody"></tbody>
     </table>
 
     <script src="app.js"></script>
