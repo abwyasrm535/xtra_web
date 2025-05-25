@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=192.168.1.2;Database=alanma2025;User Id=sa;Password=xtra2020;"
+  }
+}
